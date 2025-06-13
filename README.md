@@ -23,7 +23,6 @@ Resolução de tela de, no mínimo, 800x600 pixels
    ```sh
    python -m http.server 8000
    ```
-   E acesse http://localhost:8000
 
 ## ⚙️ Funcionalidades principais
 - Upload de imagens (múltiplas);
@@ -48,6 +47,7 @@ index.html      # Página principal
 app.js          # Lógica de detecção e interface
 style.css       # Estilos visuais
 README.md       # Este arquivo
+```
 
 ## 🧩 Tecnologias utilizadas
 TensorFlow.js — biblioteca de aprendizado de máquina executada diretamente no navegador;
