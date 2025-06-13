@@ -2,14 +2,28 @@
 <html lang="pt-br">
 <head>
   <meta charset="UTF-8">
-  <title>Detecção de Objetos - COCO-SSD</title>
+  <title>Detector de Objetos IA - COCO-SSD</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1>Detecção de Objetos em Imagem</h1>
-  <input type="file" id="imageUpload" accept="image/*" />
-  <br><br>
-  <canvas id="canvas"></canvas>
+  <header>
+    <img src="assets/logo.png" alt="Logo" height="60">
+    <h1>Detector de Objetos com IA</h1>
+  </header>
+  <section id="controls">
+    <input type="file" id="imageUpload" accept="image/*" />
+    <button id="webcamBtn">Ativar Webcam</button>
+    <button id="stopWebcamBtn" style="display:none;">Parar Webcam</button>
+    <button id="saveBtn">Salvar Resultado</button>
+  </section>
+  <section id="display">
+    <video id="webcam" width="640" height="480" autoplay muted style="display:none;"></video>
+    <canvas id="canvas"></canvas>
+    <div id="objectsList"></div>
+  </section>
+  <footer>
+    <p>Baseado em <a href="https://github.com/tensorflow/tfjs-models/tree/master/coco-ssd" target="_blank">COCO-SSD</a> e <a href="https://cocodataset.org/#home" target="_blank">COCO Dataset</a></p>
+  </footer>
   <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs"></script>
   <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/coco-ssd"></script>
   <script src="app.js"></script>
