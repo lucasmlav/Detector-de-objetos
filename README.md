@@ -1,8 +1,7 @@
-# 🔎 Detector de Objetos COCO-SSD v1.0
-<p align="center"> <strong>(c) 2023 – Todos os direitos reservados</strong> </p>
+# 🔎 Detector de Objetos com AI (COCO-SSD v1.0)
 
 ## 📘 Visão geral
-O Detector de Objetos COCO-SSD é uma aplicação baseada em navegador que utiliza técnicas avançadas de Inteligência Artificial para realizar a detecção automática de objetos em imagens. Desenvolvido para funcionar de forma totalmente local, este sistema garante privacidade, praticidade e eficiência, sem necessidade de instalação de softwares adicionais.
+Aplicação web para detecção de objetos em imagens e webcam, utilizando o modelo COCO-SSD do TensorFlow.js. Permite upload múltiplo, detecção em tempo real, exportação de resultados e interface amigável.Desenvolvido para funcionar de forma totalmente local, este sistema garante privacidade, praticidade e eficiência, sem necessidade de instalação de softwares adicionais.
 
 ## 🖥️ Requisitos necessários
 Para garantir o funcionamento adequado da aplicação, recomenda-se:
@@ -16,28 +15,39 @@ Memória RAM mínima de 64MB (idealmente 128MB)
 Resolução de tela de, no mínimo, 800x600 pixels
 
 ## 📂 Instruções de uso
-Abra o arquivo index.html em um navegador compatível;
-
-Aguarde o carregamento completo do modelo de inteligência artificial;
-
-Utilize o botão Selecionar Imagem ou arraste uma imagem para a área destinada;
-
-A detecção ocorrerá automaticamente, com os objetos identificados destacados visualmente;
-
-Serão exibidas caixas delimitadoras com os respectivos níveis de confiança (%) para cada objeto reconhecido.
+1. Baixe ou clone este repositório;
+   
+2. Abra o arquivo `index.html` em um navegador moderno (Chrome, Edge, Firefox);
+   
+3. Para usar a webcam, recomenda-se rodar um servidor local:
+   ```sh
+   python -m http.server 8000
+   ```
+   E acesse http://localhost:8000
 
 ## ⚙️ Funcionalidades principais
-Capacidade de identificar até 80 categorias distintas de objetos;
+- Upload de imagens (múltiplas);
+  
+- Detecção de objetos em imagens e via webcam;
+  
+- Lista de objetos detectados com confiança;
+  
+- Salvar imagem com detecções;
+  
+- Exportar resultados em JSON;
 
-Interface gráfica moderna, intuitiva e compatível com diferentes dispositivos;
+- Histórico de detecções;
+  
+- Tradução das classes COCO para português;
+  
+- Interface responsiva.
 
-Processamento totalmente local, mantendo a privacidade das imagens do usuário;
-
-Apresentação de índices de confiabilidade para cada detecção;
-
-Suporte a operações via arrastar e soltar;
-
-Design responsivo, adaptado para desktops, tablets e dispositivos móveis.
+## 🌉 Estrutura dos Arquivos
+```
+index.html      # Página principal
+app.js          # Lógica de detecção e interface
+style.css       # Estilos visuais
+README.md       # Este arquivo
 
 ## 🧩 Tecnologias utilizadas
 TensorFlow.js — biblioteca de aprendizado de máquina executada diretamente no navegador;
@@ -54,10 +64,14 @@ Imagens com alta complexidade visual podem comprometer a precisão da detecção
 Objetos com aparência semelhante podem ser erroneamente classificados.
 
 ## 🤝 Agradecimentos
-À equipe de desenvolvimento do TensorFlow, pela disponibilização de uma biblioteca robusta e acessível;
 
-À comunidade global de pesquisadores e profissionais de inteligência artificial que compartilham conhecimento e contribuições;
+À equipe de desenvolvimento do TensorFlow, pela disponibilização de uma biblioteca robusta e acessível;
 
 A todos os usuários que confiam e experimentam esta solução.
 
-<p align="center"> <strong>Agradecemos por utilizar nosso software.</strong> </p>
+## 📜 Créditos e Referências
+- [TensorFlow.js COCO-SSD](https://github.com/tensorflow/tfjs-models/tree/master/coco-ssd)
+- [COCO Dataset](https://cocodataset.org/#home)
+
+---
+Desenvolvido para fins educacionais e demonstração de IA aplicada à visão computacional. 
